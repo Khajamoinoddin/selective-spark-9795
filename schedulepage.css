@@ -1,0 +1,42 @@
+body{
+    background-color:#e8e9ef
+}
+#header{
+    
+    width:70%;
+    margin: auto;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+   
+}
+#inn {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:13px;
+   
+}
+#inn>button{
+   height: 5vh;
+   width:12vw ;
+ 
+   border-radius: 5px;
+   border: 0.5px solid black;
+   
+}
+#inn2{
+    height: 5vh;
+   width:18vw ;
+   text-align: center;
+   background-color:#A70E13;
+   color: white;
+}
+button:hover{
+   
+    color: white;
+    background-color: #A70E13
+    
+}
+
+
