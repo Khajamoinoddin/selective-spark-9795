@@ -14,18 +14,20 @@
             </div>
             <div class="head">
                    <div id="inn">
-                       <button>UPCOMING</button>
-                       <button>LIVE</button>
-                       <button>RESULTS</button>
+                       <button onclick="upcoming()">UPCOMING</button>
+                       <button onclick="live()">LIVE</button>
+                       <button onclick="results()">RESULTS</button>
                    </div>
                    <div>
-                        <select name="" id="inn2">
+                        <select name="" id="inn2" onchange="selectone()">
                             <option value="ALL">ALL</option>
-                            <option value="INTERNATIONAL">INTERNATIONAL</option>
-                            <option value="DOMESTIC">DOMESTIC</option>
+                            <option value="INT">INTERNATIONAL</option>
+                            <option value="DOM">DOMESTIC</option>
                         </select>
                    </div>
             </div>
         </div>
+        <div id="container"></div>
 </body>
 </html>
+<script src="./schedulepage.js"></script>
