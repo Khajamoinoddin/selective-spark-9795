@@ -4,9 +4,9 @@ function login() {
 
   function slide() {
     const arr = [
-      "criclytics.PNG",
-      "match prediction.PNG",
-      "com_stats.PNG",
+      "../images/criclytics.PNG",
+      "../images/match prediction.png",
+      "../images/com_stats.PNG",
     ];
     let image = document.getElementById("slideimage");
     let i = 1;
