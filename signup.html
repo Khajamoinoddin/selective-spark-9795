@@ -51,6 +51,9 @@
         border: 1px solid;
         border-color: #25d298;
       }
+      #submit:hover{
+      cursor: pointer;
+      }
       #submit {
         background-color: #25d298;
         border-radius: 30px;
@@ -60,17 +63,17 @@
       }
       #facebook,
       #google {
-        background-color: black;
+        background-color: rgb(66, 103, 178);
         color: white;
         font-size: 16px;
         font-weight: bold;
         border-radius: 30px;
       }
       #google {
-        background-color: blue;
+        background-color: rgb(187, 0, 27);
       }
       span > a {
-        color: #25d298;
+        color: blue;
       }
       #success {
         z-index: 1;
@@ -129,7 +132,7 @@
       } */
     </style>
   </head>
-  <body>
+  <body >
     <div id="success">
       <div id="message">
         <h1 id="state"></h1>
@@ -211,7 +214,7 @@ errM.forEach(element => {
 
 <!-- <script type="module">
 
-    import navbar from './components/navbar.js'
+    import navbar from './components/nav.js'
     let navbar_append=document.getElementById("nav_container")
     navbar_append.innerHTML=navbar()
 </script> -->
