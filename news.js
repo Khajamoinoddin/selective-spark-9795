@@ -1,4 +1,5 @@
 
+
     let categ=JSON.parse(localStorage.getItem("categ"))
     console.log(categ);
     
@@ -6,8 +7,9 @@
         try{
             let res = await fetch (`https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=7fe798a8a3b34e748f7f0ccb417e8f64`)
             let data= await res.json()
-            let new_data=data.sources
+            // let new_data=data.articles
             console.log(data.articles);
+            
             appendData(data)
         }
         catch(err){
@@ -28,7 +30,9 @@
             div2.setAttribute("class", "text")
             let div3= document.createElement('div')
             div3.setAttribute("class", "date_author")
-            let name1=document.createElement('h2')
+            let name1=document.createElement('h3')
+           name1.setAttribute("class","name2")
+        
             name1.innerHTML=title
             let desc1=document.createElement('p')
             desc1.innerHTML=description
@@ -37,22 +41,36 @@
             let pub1=document.createElement('p')
             pub1.innerHTML=publishedAt
             let img1=document.createElement('img')
-            img1.src=urlToImage
-            img1.style.width="500px"
-            img1.style.height="250px"
-            img1.style.borderRadius="10px"
+            if(urlToImage==null){
+                img1.src="https://tse2.mm.bing.net/th?id=OIP.s2s2eHdYaHlQQgUYCI3HywHaE6&pid=Api&P=0"
+                img1.style.width="420px"
+                img1.style.height="220px"
+                // imag.style.height="100px"
+                img1.style.borderRadius="5px"
+                img1.style.overflow="hidden"
+            }
+            else{img1.src=urlToImage
+            //console.log(urlToImage,imag)
+            img1.style.width="420px"
+            img1.style.height="220px"
+            img1.style.borderRadius="5px"
+            img1.style.overflow="hidden"
+            // imag.strech="200px"
+        }
+            
 
             div1.append(img1)
             div1.style.marginRight="10px"
-            div3.append(pub1,auth1)
-            div3.style.display="flex"
+            div3.append(auth1,pub1)
+            div3.style.marginTop="10px"
+            
             div2.append(name1,desc1,div3)
             div2.style.paddingTop="-10px"
             div.append(div1,div2)
             div.style.display="flex"
             div.style.padding="20px"
             append_ent_data.append(div)
-            append_ent_data.style.width="80%"
+            append_ent_data.style.width="70%"
             append_ent_data.style.margin="auto"
             append_ent_data.style.fontFamily= "Montserrat";
             // console.log(element.name);
