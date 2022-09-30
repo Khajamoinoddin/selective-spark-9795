@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./series.css">
+</head>
+<body>
+    <div id="level">
+       <h1> <label for="series">Series</label></h1>
+    </div>
+    <div id="upper">
+        <h2 onclick="changee()" id="up">UPCOMING</h2>
+        <h2 onclick="changee()" id="on">ONGOING</h2>
+        <h2 onclick="changee()" id="co">COMPLETED</h2>
+    </div>
+    <hr>
+    <div id="btt">
+        <h3 id="al" onclick="alld()">ALL</h3>
+        <h3 id="ii" onclick="ii()">INTERNATIONAL</h3>
+        <h3 id="do" onclick="doo()">DOMESTIC</h3>
+        <h3 id="wo" onclick="wo()">WOMEN'S</h3>
+        <div id="fill"><img src="https://www.cricket.com/svgs/filter.svg" alt="" width="20"><h3>Filter</h3></div>
+    </div>
+    <hr>
+    <div class="modal-container" id="modal_container">
+        <div id="cc">
+            <h2>Filter</h2>
+            <button id="close">close</button>
+        </div>
+        <div class="modal">
+            
+            <h3>Country</h3>
+            <div id="coun">
+                <div>IND</div>
+                <div>AUS</div>
+                <div>NZ</div>
+                <div>ENG</div>
+                <div>SA</div>
+                <div>PAK</div>
+                <div>BAN</div>
+                <div>SL</div>
+                <div>WI</div>
+            </div>
+        </div>
+        <div class="modal">
+            <h3>Format</h3>
+            <div id="for">
+                <div>ODI</div>
+                <div>T20</div>
+                <div>Tests</div>
+                <div>T100</div>
+            </div>
+        </div>
+        <button id="done">Done</button>
+        
+    </div>
+    <div id="containers"></div>
+</body>
+</html>
+<script src="./series.js"></script>
