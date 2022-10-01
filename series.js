@@ -1,11 +1,27 @@
- let changee=()=>{
-  let up = document.getElementById("up")
-  up.style.borderBottom = "3px solid red"
-  let on = document.getElementById("on")
-  on.style.borderBottom = "3px solid red"
-  let co = document.getElementById("co")
-    co.style.borderBottom = "3px solid red"
- }
+//  let changee=()=>{
+//   let up = document.getElementById("up")
+//   up.style.borderBottom = "3px solid red"
+//   let on = document.getElementById("on")
+//   on.style.borderBottom = "3px solid red"
+//   let co = document.getElementById("co")
+//     co.style.borderBottom = "3px solid red"
+//  }
+
+let up = ()=>{
+    document.getElementById("up").style.borderBottom = "3px solid red";
+    document.getElementById("on").style.borderBottom = null;
+    document.getElementById("co").style.borderBottom = null;
+}
+let on = ()=>{
+    document.getElementById("on").style.borderBottom = "3px solid red";
+    document.getElementById("up").style.borderBottom = null
+    document.getElementById("co").style.borderBottom = null
+}
+let co = ()=>{
+    document.getElementById("co").style.borderBottom = "3px solid red";
+    document.getElementById("up").style.borderBottom = null
+    document.getElementById("on").style.borderBottom = null
+}
 //  let on=()=>{
 //     let on = document.getElementById("on")
 //     on.style.borderBottom = "3px solid red"
@@ -29,10 +45,9 @@ getdata()
     let cont = document.getElementById("containers")
     cont.innerHTML = null;
     data.forEach((el)=>{
-        let div = document.createElement("div")
-        div.setAttribute("class","cparent")
-        div.style.display = "flex";
-        div.style.border = el.border;
+        let wht = document.createElement("div")
+        wht.setAttribute("class","cparent")
+        wht.style.border = el.border;
         let indiv = document.createElement("div")
         indiv.setAttribute("class","c1")
         let div2 = document.createElement("div")
@@ -54,25 +69,51 @@ getdata()
         p3.style.color = "white"
         div3.style.backgroundColor = el.color;
         div3.append(p3)
-        div.append(indiv,div3)
-        cont.append(div)
+        wht.append(indiv,div3)
+        cont.append(wht)
     })
  }
 
 // click func in all category
 let alld = ()=>{
-    document.getElementById("al").style.backgroundColor = "#FF0000"
+    document.getElementById("al").style.backgroundColor = "#a70e13"
+    document.getElementById("ii").style.backgroundColor = null
+    document.getElementById("wo").style.backgroundColor = null
+    document.getElementById("do").style.backgroundColor = null
+    getdata()
 }
 
-let ii = ()=>{
+let ii = async ()=>{
   document.getElementById("ii").style.backgroundColor = "#43b88e"
+  document.getElementById("al").style.backgroundColor = null;
+  document.getElementById("wo").style.backgroundColor = null;
+  document.getElementById("do").style.backgroundColor = null;
+
+    let url = "https://mr-mishra.herokuapp.com/international"
+    let res = await fetch(url)
+    let data = await res.json();
+    renderDom(data)
 }
-// let doo = ()=>{
-//     document.getElementById("ii").
-// }
-// let wo = ()=>{
-    
-// }
+let doo = async ()=>{
+    document.getElementById("do").style.backgroundColor = "#a4c0c6"
+    document.getElementById("al").style.backgroundColor = null
+  document.getElementById("wo").style.backgroundColor = null
+  document.getElementById("ii").style.backgroundColor = null
+  let url = "https://mr-mishra.herokuapp.com/domestic"
+    let res = await fetch(url)
+    let data = await res.json();
+    renderDom(data)
+}
+let wo = async ()=>{
+    document.getElementById("wo").style.backgroundColor = "#ff8474"
+    document.getElementById("ii").style.backgroundColor = null
+    document.getElementById("al").style.backgroundColor = null
+    document.getElementById("do").style.backgroundColor = null
+    let url = "https://mr-mishra.herokuapp.com/women"
+    let res = await fetch(url)
+    let data = await res.json();
+    renderDom(data)
+}
 
 const open = document.getElementById('fill');
 const modal_container = document.getElementById('modal_container')
