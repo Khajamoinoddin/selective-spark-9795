@@ -47,6 +47,12 @@ button:hover{
     background-color: white;
     margin-top: 40px;
     padding: 10px;
+    height:500px;
+   
+    /* position: -webkit-sticky;
+    position: sticky; */
+   
+    overflow: scroll;
    
 }
 .img1{
