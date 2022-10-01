@@ -3,6 +3,7 @@ let container=document.getElementById('container')
 
 let upcoming=async()=>{
     //  alert('hi i am upcoming')
+   
     let date2=new Date
     console.log(date2)
     let month=date2.getUTCMonth()+1
@@ -26,6 +27,8 @@ upcoming()
 let appendData=(data)=>{
         container.innerHTML=null
     data.forEach((el)=>{
+      // let u=document.getElementById('uc')
+      // u.style.backgroundColor="#A70E13"
             if(el.event_status_info==null){  
             let div=document.createElement('div')
             div.id="main"
@@ -97,13 +100,13 @@ let appendData=(data)=>{
 
 }
 
-let appendupcoming=(el)=>{
-  let arr=[]
-  arr.push(el)
+// let appendupcoming=(el)=>{
+//   let arr=[]
+//   arr.push(el)
   
-  localStorage.setItem('data',JSON.stringify(arr))
-  window.location.href="upcoming.html"
-}
+//   localStorage.setItem('data',JSON.stringify(arr))
+//   window.location.href="upcoming.html"
+// }
 
 // let upcomingData=JSON.parse(localStorage.getItem('data'))||[]
 // console.log(upcomingData)
@@ -129,7 +132,8 @@ let appendupcoming=(el)=>{
 
 let live=async()=>{
 // alert('hi i am live')
-
+// let l=document.getElementById('lv')
+// l.style.backgroundColor="#A70E13"
     let res=await fetch(`https://apiv2.api-cricket.com/?method=get_livescore&APIkey=7d62c723b884900b164dedced277c45adbaeaf5a56bf15301f9e17b4537c62a7`)
 
     res=await res.json()
@@ -240,12 +244,14 @@ data2.forEach((el)=>{
 
 
 let appendliveData=(el)=>{
-  alert('hi live')
-  let arr=[]
-  arr.push(el)
   
-  localStorage.setItem('datalive',JSON.stringify(arr))
-  //  window.location.href="live.html"
+  
+    let arr=[]
+    arr.push(el)
+    
+    localStorage.setItem('dataresult',JSON.stringify(arr))
+   window.location.href="upcoming.html"
+  
 }
 
 
@@ -300,13 +306,13 @@ data3.forEach((el)=>{
         h2.innerText=el.league_name+" "+el.league_season
         
         let p=document.createElement('p')
-        p.innerText=el.event_away_final_result
+        p.innerText=el.event_home_final_result
 
         p.className="time"
         let a=document.createElement('p')
         a.innerText=el.event_status_info
        let time=document.createElement('p')
-       time.innerText=el.event_home_final_result
+       time.innerText=el.event_away_final_result
 
          time.className="time"
 
@@ -376,7 +382,6 @@ let appendresultsData=(el)=>{
       
 //   appendData(filter_data)
 // }
-
 
 
 
