@@ -31,7 +31,7 @@ function navbar(){
     
             <div  class="tab_name">Series</div>
            </div>
-           <a style="display:block" href="..html/news.html"><div id="adjust1"  class="containing_tabs">
+           <a style="display:block" href="./news.html"><div id="adjust1"  class="containing_tabs">
             <div class="tab_logo">
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/news-and-articles-icon.svg" alt="news_logo"/>
             </div>
@@ -107,7 +107,7 @@ function navbar(){
                     </div>
                     <div class="name_of_logo">Season Fantasy</div>
                 </div>
-                <a style="display:block" href="../login.html"> <div class="menu_content_row">
+                <a style="display:block" href="../signup.html"> <div class="menu_content_row">
                     <div class="menu_content_row_logo">
                         <img src="https://www.cricket.com/svgs/icons/profile.svg" alt="Profile-icon">
                         
