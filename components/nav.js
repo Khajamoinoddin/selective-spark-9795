@@ -1,7 +1,7 @@
 function navbar(){
     return`<div id="containing_logo_othertabs">
         <div id="containing_logo">
-            <a href="../html/index.html"><img src="https://www.cricket.com/cricket.com.svg" alt="logo"/></a>
+            <a href="../index.html"><img src="https://www.cricket.com/cricket.com.svg" alt="logo"/></a>
         </div>
         <!-- -------------------------end of logo-------------- -->
         <!-- ------------------------------start of different tabs----------- -->
@@ -35,12 +35,12 @@ function navbar(){
             <div class="tab_logo">
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/news-and-articles-icon.svg" alt="news_logo"/>
             </div></a>
-            <div class="tab_name">News</div>
+            <a style="display:block" href="../html/news.html"><div class="tab_name">News</div>
            </div>
            <div  id="adj4"class="containing_tabs">
             <div class="tab_logo">
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/video-icon.svg" alt="videos_logo"/>
-            </div>
+            </div></a>
             <div class="tab_name">Videos</div>
            </div>
            <div id="adj5"class="containing_tabs">

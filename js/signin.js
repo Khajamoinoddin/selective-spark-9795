@@ -31,7 +31,7 @@ submit.addEventListener("click", () => {
     state.textContent = "Success!";
     state.style.color = "Green";
     res.textContent = "Your have been successfuly logged in";
-    rd_link.href = "./html/index.html";
+    rd_link.href = "../index.html";
     rd_link.textContent = "Continue";
   }
 }); 
