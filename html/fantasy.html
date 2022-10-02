@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantasy Center</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
 </head>
 <body>
+    <div id="navbar"></div>
     <!-- yellow bar on top -->
    <div id="fmain">
     <div class="ftop">
@@ -100,6 +103,16 @@
     </div>
     </div>
    </div>
+   <div id="footer"></div>
 </body>
 </html>
 <script src="../js/fantasy.js"></script>
+<script type="module">
+    import {navbar} from '../components/nav.js'
+    let navbar_append=document.getElementById("navbar")
+    navbar_append.innerHTML=navbar()
+
+    import {footer} from '../components/foot.js'
+    let footer_append=document.getElementById("footer")
+    footer_append.innerHTML=footer()
+</script>

@@ -1,5 +1,5 @@
-import {navbar} from "../html/components/nav.js"
-import {footer} from "../html/components/foot.js"
+import {navbar} from "../components/nav.js"
+import {footer} from "../components/foot.js"
 
 
 document.getElementById("navbar").innerHTML=navbar();
@@ -27,9 +27,9 @@ let get=async ()=>{
   console.log(data)
     display(cont,data)
 }catch{
-    setTimeout(function(){
-        alert("the news api only works on local host, for demo pls see video")
-    },5000)
+    // setTimeout(function(){
+    //     alert("the news api only works on local host, for demo pls see video")
+    // },5000)
   
 }
 }

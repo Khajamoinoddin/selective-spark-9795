@@ -26,20 +26,7 @@
 #logo {
   margin-left: 17rem;
 }
-.navdiv {
-  padding: 20px 16px;
-}
 
-.navdiv p {
-  font-size: 15px;
-  color: white;
-  font-size: 10px;
-  
-  }
-  .navdiv img {
-  width:1.3rem;
-  
-  }
 .navdiv:hover {
   background-color: rgb(105, 117, 143);
 }

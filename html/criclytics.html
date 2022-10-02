@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="https://images.cricket.com/icons/mainlogoico.ico">
     
     <title>Cricletics</title>
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
@@ -15,7 +17,7 @@
 <link rel="stylesheet" href="../styles/crickly.css">
 </head>
 <body>
-
+<div id="navbar"></div>
     <!-- End Header part -->
 <div id="outerdiv">
   <img id="slideimage" src="../images/criclytics.PNG" />
@@ -185,6 +187,16 @@
 </div>
 </div>
 </div>
+<div id="footer"></div>
   </body>
 </html>
 <script src="../js/crickly.js"></script>
+<script type="module">
+        import {navbar} from '../components/nav.js'
+        let navbar_append=document.getElementById("navbar")
+        navbar_append.innerHTML=navbar()
+    
+        import {footer} from '../components/foot.js'
+        let footer_append=document.getElementById("footer")
+        footer_append.innerHTML=footer()
+</script>

@@ -1,12 +1,12 @@
 function navbar(){
     return`<div id="containing_logo_othertabs">
         <div id="containing_logo">
-            <a href="../main/index.html"><img src="https://www.cricket.com/cricket.com.svg" alt="logo"/></a>
+            <a href="../html/index.html"><img src="https://www.cricket.com/cricket.com.svg" alt="logo"/></a>
         </div>
         <!-- -------------------------end of logo-------------- -->
         <!-- ------------------------------start of different tabs----------- -->
         <div id="containing_othertabs">
-        <a style="display:block" href="..html/fantasy.html"> <div class="containing_tabs" id="fantasy_tab">
+        <a style="display:block" href="../html/fantasy.html"> <div class="containing_tabs" id="fantasy_tab">
             <div class="tab_logo">
                <img class="tab_logo" src="https://www.cricket.com/svgs/icons/frc.svg" alt="fantasy_logo"/>
             </div>
@@ -18,7 +18,7 @@ function navbar(){
             </div>
             <div class="tab_name">Criclytics</div>
            </div></a>
-           <a style="display:block" href="../shedule.html"><div id="adjust3" class="containing_tabs">
+           <a style="display:block" href="../html/schedulepage.html"><div id="adjust3" class="containing_tabs">
             <div class="tab_logo">
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/schedule-icon.svg" alt="schedule_logo"/>
             </div>
@@ -29,33 +29,33 @@ function navbar(){
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/series-icon.svg" alt="series_logo"/>
             </div>
     
-            <div  class="tab_name">Series</div>
+            <a style="display:block" href="../html/series.html"><div  class="tab_name">Series</div>
            </div>
-           <a style="display:block" href="./news.html"><div id="adjust1"  class="containing_tabs">
+           <div id="adjust1"  class="containing_tabs">
             <div class="tab_logo">
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/news-and-articles-icon.svg" alt="news_logo"/>
-            </div>
+            </div></a>
             <div class="tab_name">News</div>
-           </div></a>
+           </div>
            <div  id="adj4"class="containing_tabs">
             <div class="tab_logo">
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/video-icon.svg" alt="videos_logo"/>
             </div>
             <div class="tab_name">Videos</div>
            </div>
-           <a href="../html/player.html"><div id="adj5"class="containing_tabs">
+           <div id="adj5"class="containing_tabs">
             <div class="tab_logo">
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/players-icon.svg" alt="players_logo"/>
             </div>
             <div class="tab_name">Players</div>
-           </div></a>
+           </div>
     
-           <a style="display:block" href="../html/teams.html"><div id="adjust2" class="containing_tabs">
+           <div id="adjust2" class="containing_tabs">
             <div class="tab_logo">
                 <img class="tab_logo" src="https://www.cricket.com/svgs/icons/teams-icon.svg" alt="teams_logo"/>
             </div>
             <div class="tab_name">Teams</div>
-           </div></a>
+           </div>
            <!-- --------------------------more tab ---------------------- -->
            <div class="containing_tabs" id="getdropdown">
             <div class="tab_logo" >
@@ -68,7 +68,7 @@ function navbar(){
             </div>
             <!-- ------------------------------start of menu features--------------------------- -->
             <div id="menu_content">
-            <a style="display:block"  href="../stadium.html"><div class="menu_content_row">
+            <div class="menu_content_row">
            
              <div class="menu_content_row_logo">
             
@@ -76,9 +76,9 @@ function navbar(){
                        
                     </div>
                     <div class="name_of_logo">Stadiums</div>
-                </div></a>
+                </div>
     
-                <a style="display:block"  href="../ranking.html"> <div class="menu_content_row">
+                <a style="display:block"  href="../html/ranking.html"> <div class="menu_content_row">
                     <div class="menu_content_row_logo">
                <img src="https://www.cricket.com/svgs/icons/rankings-icon.svg" alt="ranking-icon">
                         
@@ -107,7 +107,7 @@ function navbar(){
                     </div>
                     <div class="name_of_logo">Season Fantasy</div>
                 </div>
-                <a style="display:block" href="../signup.html"> <div class="menu_content_row">
+                <a style="display:block" href="../html/signin.html"> <div class="menu_content_row">
                     <div class="menu_content_row_logo">
                         <img src="https://www.cricket.com/svgs/icons/profile.svg" alt="Profile-icon">
                         

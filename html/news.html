@@ -42,17 +42,14 @@
     <div id="footer"></div>
 </body>
 </html>
-
-
 <script src="../js/news.js" ></script>
 
 <script type="module">
-// /
-    import {navbar} from '../html/components/nav.js'
+    import {navbar} from '../components/nav.js'
     let navbar_append=document.getElementById("navbar")
     navbar_append.innerHTML=navbar()
 
-    import {footer} from '../html/components/foot.js'
+    import {footer} from '../components/foot.js'
     let footer_append=document.getElementById("footer")
     footer_append.innerHTML=footer()
 </script>

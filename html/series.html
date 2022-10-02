@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../styles/series.css" />
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
   </head>
   <body>
+    <div id="navbar"></div>
     <div id="level">
       <h1><label for="series">Series</label></h1>
     </div>
@@ -59,8 +62,18 @@
       <button id="done">Done</button>
     </div>
     <div>
-        <div id="containers"></div>
+      <div id="containers"></div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>
 <script src="../js/series.js"></script>
+<script type="module">
+  import {navbar} from '../components/nav.js'
+  let navbar_append=document.getElementById("navbar")
+  navbar_append.innerHTML=navbar()
+
+  import {footer} from '../components/foot.js'
+  let footer_append=document.getElementById("footer")
+  footer_append.innerHTML=footer()
+</script>

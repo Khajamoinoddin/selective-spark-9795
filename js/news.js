@@ -16,12 +16,13 @@
             console.log("err", err)
         }
      }
-     getData(categ)
+     getData()
      
      let appendData = (data) =>{
         //  console.log(new_data);
          let append_ent_data=document.getElementById("container")
-         data.articles.forEach(({title,description,urlToImage,publishedAt,author}) => {
+         append_ent_data.innerHTML = null
+         data["articles"].forEach(({title,description,urlToImage,publishedAt,author}) => {
             let div= document.createElement('div')
             div.setAttribute("class", "elem")
             let div1= document.createElement('div')
