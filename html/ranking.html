@@ -60,6 +60,7 @@ margin-top: 20px;
     </style>
 </head>
 <body>
+    <div id="navbar"></div>
     <h2>Rankings</h2>
     <div id="bton">
         <div id="odi" onclick="odi()">ODI</div>
@@ -73,6 +74,17 @@ margin-top: 20px;
         </div>
         <div id="conti"></div>
     </div>
+    <div id="footer"></div>
 </body>
 </html>
 <script src="../js/ranking.js"></script>
+
+<script type="module">
+    import {navbar} from '../components/nav.js'
+    let navbar_append=document.getElementById("navbar")
+    navbar_append.innerHTML=navbar()
+
+    import {footer} from '../components/foot.js'
+    let footer_append=document.getElementById("footer")
+    footer_append.innerHTML=footer()
+</script>
