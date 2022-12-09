@@ -25,6 +25,13 @@ let appendData=(dataresult)=>{
         let d=document.createElement('div')
        d.id="heading"
        d.style.backgroundColor="teal"
+     
+       let h3=document.createElement('img')
+       h3.src="	https://www.cricket.com/svgs/backIconWhite.svg"
+       h3.onclick=()=>{
+       window.location.href='schedulepage.html'
+       }
+
         let h2=document.createElement('h2')
         h2.innerText=el.event_home_team+" "+"VS"+" "+el.event_away_team
         h2.style.color="white"
@@ -84,7 +91,7 @@ let appendData=(dataresult)=>{
        
        
        
-       d.append(h2)
+       d.append(h3,h2)
         div3.append(team,team2)
         div6.append(rr,rr2)
         div7.append(btn,btn2,btn3,btn4,btn5,btn6)
@@ -161,11 +168,11 @@ container2.append(div)
 
 let scorecardData=(el)=>{
 
-let data=el.ball_by_ball
+let score=el.scorecard["IND INNINGS"]
 
-console.log(data)
-// let {IND_INNINGS}=data
-console.log(data)
+console.log(score)
+
+
 
 }
 

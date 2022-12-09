@@ -108,8 +108,14 @@ border:0px
     width: 70%;
     margin: auto;
     background-color: white;
-    margin-top: 5px;
+   
     padding: 10px;
+   
+    height:500px;
+margin-bottom: -10px;
+   
+  
+    
 }
 #main22{
     display: flex;
@@ -123,13 +129,26 @@ border:0px
     margin: auto;
 }
 .lane{
-    margin-top: -30px;
+    line-height: 2px;
+    margin-top: -10px;
+   
 }
 
+
+button{
+    background-color: white;
+    border: 0px;
+    margin-left: 10px;
+}
+button:hover{
+    border-bottom: 2px solid blue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* 
 *{
     margin: 0px;
     padding: 0px;
-}
+} */
 #navbar{
     /* border: 1px solid red; */
     width: 100%;
@@ -275,14 +294,4 @@ margin-bottom: -13px;
     font-size: 12px;
     font-family: sans-serif;
     margin-left: 8px;
-}
-
-button{
-    background-color: white;
-    border: 0px;
-    margin-left: 10px;
-}
-button:hover{
-    border-bottom: 2px solid blue;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

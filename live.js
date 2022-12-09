@@ -33,6 +33,14 @@ let appendData=(dataresult)=>{
         p.innerText=el.event_away_final_result
 
         p.className="time"
+
+        let h3=document.createElement('img')
+        h3.src="	https://www.cricket.com/svgs/backIconWhite.svg"
+        h3.onclick=()=>{
+        window.location.href='schedulepage.html'
+        }
+
+
         let a=document.createElement('p')
         a.innerText=el.event_status_info
        let time=document.createElement('p')
@@ -90,7 +98,7 @@ let appendData=(dataresult)=>{
        
        
        
-       d.append(h2)
+       d.append(h3,h2)
         div3.append(team,team2)
         div6.append(rr,rr2)
         div7.append(btn,btn2,btn3,btn4,btn5,btn6)
@@ -210,6 +218,7 @@ container3.innerHTML=null
 }
 let appendaway=(el)=>{
   container3.innerHTML=null
+  container2.innerHTML=null
   let data2=el.lineups.away_team.starting_lineups
     console.log(data2)
   data2.forEach((el)=>{
@@ -230,6 +239,7 @@ let appendaway=(el)=>{
 
 let appendhome=(el)=>{
   container3.innerHTML=null
+  container2.innerHTML=null
   let data2=el.lineups.home_team.starting_lineups
     console.log(data2)
   data2.forEach((el)=>{
@@ -253,6 +263,9 @@ let commentary=(el)=>{
   let data3=el.comments.Live
   console.log(data3)
 container3.innerHTML=null
+
+let btnii=document.createElement('button')
+btnii.innerText="Load More"
   for(let i=data3.length-1;i>=0;i--){
     console.log(data3[i])
 
@@ -263,9 +276,13 @@ container3.innerHTML=null
     let h5=document.createElement('h5')
     h5.innerText="Runs *"+data3[i].runs
     let h52=document.createElement('h5')
+    
     h52.innerText="Over *"+data3[i].overs
 
+   
+
+    
     div.append(p,h5,h52)
-    container3.append(div)
+    container3.append(div,btnii)
   }
 }

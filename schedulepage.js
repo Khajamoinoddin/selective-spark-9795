@@ -46,7 +46,7 @@ let appendData=(data)=>{
             let img2=document.createElement('img')
             img2.src=el.event_away_team_logo
             img2.className='img1'
-            let h2=document.createElement('h2')
+            let h2=document.createElement('h4')
             h2.innerText=el.league_name+" "+el.league_season
             
             let p=document.createElement('p')
@@ -147,9 +147,9 @@ let live=async()=>{
 let appendlive=(data2)=>{
     container.innerHTML=null
 data2.forEach((el)=>{
-      if(el.event_status=="In Progress"){ 
+      // if(el.event_status=="In Progress"){ 
         let div=document.createElement('div')
-        div.id="main"
+        div.id="main2"
         div.onclick=()=>{
           appendliveData(el)
        }
@@ -175,7 +175,7 @@ data2.forEach((el)=>{
           img2.innerText=el.event_home_final_result+" & "+el.event_service_home
         }
         img2.className='img1'
-        let h2=document.createElement('h3')
+        let h2=document.createElement('h4')
         h2.innerText=el.league_name+" "+el.league_season
         
         let p=document.createElement('p')
@@ -233,7 +233,7 @@ data2.forEach((el)=>{
       
       
        container.append(div)
-      }
+      // }
       })
 
 
@@ -250,7 +250,7 @@ let appendliveData=(el)=>{
     arr.push(el)
     
     localStorage.setItem('dataresult',JSON.stringify(arr))
-   window.location.href="upcoming.html"
+   window.location.href="live.html"
   
 }
 
@@ -302,7 +302,7 @@ data3.forEach((el)=>{
         let img2=document.createElement('img')
         img2.src=el.event_away_team_logo
         img2.className='img1'
-        let h2=document.createElement('h2')
+        let h2=document.createElement('h4')
         h2.innerText=el.league_name+" "+el.league_season
         
         let p=document.createElement('p')
@@ -382,6 +382,5 @@ let appendresultsData=(el)=>{
       
 //   appendData(filter_data)
 // }
-
 
 
